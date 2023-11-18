@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRUDHikerAppXamarin.AddHikeLog"
+             Title="Add / Update Hike Log">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="10"/>
+                <Setter Property="TextColor" Value="LightGray"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout Margin="10">
+        <VerticalStackLayout>
+            <Label Text="Name of Hike" FontSize="16"/>
+            <Entry Placeholder="Enter Name" Text="{Binding HikeLogDetails.HikeName}"></Entry>
+        </VerticalStackLayout>
+        <VerticalStackLayout>
+            <Label Text="Location" FontSize="16"/>
+            <Entry Placeholder="Enter Location" Text="{Binding HikeLogDetails.Location}"></Entry>
+        </VerticalStackLayout>
+        <VerticalStackLayout>
+            <Label Text="Date of Hike" FontSize="16"/>
+            <DatePicker Date="{Binding HikeLogDetails.DateOfHike}"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout>
+            <Label Text="Parking" FontSize="16"/>
+            <Entry Placeholder="Yes / No" Text="{Binding HikeLogDetails.Parking}"></Entry>
+        </VerticalStackLayout>
+        <VerticalStackLayout>
+            <Label Text="Length of Hike" FontSize="16"/>
+            <Entry Placeholder="Enter length" Text="{Binding HikeLogDetails.Length}"></Entry>
+        </VerticalStackLayout>
+        <VerticalStackLayout>
+            <Label Text="Level of Hike" FontSize="16"/>
+            <Entry Placeholder="Easy / Average / Difficult" Text="{Binding HikeLogDetails.Level}"></Entry>
+        </VerticalStackLayout>
+        <VerticalStackLayout>
+            <Label Text="Description" FontSize="16"/>
+            <Entry Placeholder="Enter description" Text="{Binding HikeLogDetails.Description}"></Entry>
+        </VerticalStackLayout>
+        <Button Text="SAVE" Command="{Binding AddHikeLogCommand}"></Button>
+    </StackLayout>
+</ContentPage>
